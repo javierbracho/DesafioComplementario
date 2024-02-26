@@ -1,0 +1,18 @@
+.chat {
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: lightgrey;
+}
+
+.mensaje{
+    background-color: aliceblue;
+    padding: 5px;
+    padding-right: 15px;
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: fit-content;
+}

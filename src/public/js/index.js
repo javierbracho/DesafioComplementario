@@ -29,13 +29,24 @@ chatbox.addEventListener("keyup", (event)=> {
 })
 
 socket.on("messages", (data) => {
-    let log = document.getElementById("mensajes");
+    const log = document.getElementById("mensajes");
     let messages = "";
   
     data.forEach((message) => {
-      messages += `${message.user} dice: ${message.message} <br>`;
+        const messageDiv = document.createElement("div");
+        
+        messageDiv.classList.add("mensajes");
+        
+        messageDiv.innerHTML = `<div class="mensaje"><b>${message.user}</b> dice: ${message.message}</div>`;
+        
+        log.appendChild(messageDiv);
+    
+        messages += `<div class="mensaje"><b>${message.user}</b> dice: ${message.message}</div>`;
     });
-  
+    
+
+
     log.innerHTML = messages;
-  });
+});
+
   
