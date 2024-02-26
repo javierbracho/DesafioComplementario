@@ -5,4 +5,4 @@ import mongoose from "mongoose";
         .catch( error => console.log(error))
 
 
-export default {mongoose}
+export default mongoose
